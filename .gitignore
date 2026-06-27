@@ -1,2 +1,29 @@
-.DS_Store
-Thumbs.db
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Native build output
+android/.gradle/
+android/app/build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+macos/Pods/
+
+# Firebase/local secrets
+.env
+firebase_options.dart
+GoogleService-Info.plist
+google-services.json
+
+# Local run logs
+flutter-web-server*.log

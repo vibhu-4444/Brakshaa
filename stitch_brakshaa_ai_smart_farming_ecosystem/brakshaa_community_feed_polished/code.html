@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Brakshaa 3.0 - Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#efeee9",
+                        "surface-dim": "#dbdad5",
+                        "primary-container": "#0d8553",
+                        "outline": "#6e7a70",
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-tint": "#006d42",
+                        "inverse-surface": "#30312e",
+                        "on-primary": "#ffffff",
+                        "primary": "#006a40",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "on-tertiary-container": "#fffbff",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-variant": "#e3e3de",
+                        "on-secondary-container": "#616363",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1b1c19",
+                        "surface-container-highest": "#e3e3de",
+                        "secondary-fixed": "#e2e2e2",
+                        "inverse-primary": "#74dba0",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-container": "#dfe0e0",
+                        "on-primary-fixed-variant": "#005231",
+                        "secondary": "#5d5f5f",
+                        "on-surface-variant": "#3e4941",
+                        "on-primary-fixed": "#002111",
+                        "surface-container-high": "#e9e8e3",
+                        "tertiary-fixed": "#ffdea3",
+                        "surface-container-low": "#f5f4ef",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#775600",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#fdbc13",
+                        "on-primary-container": "#f6fff5",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#faf9f4",
+                        "surface": "#faf9f4",
+                        "on-tertiary-fixed": "#261900",
+                        "tertiary-container": "#966e00",
+                        "primary-fixed": "#90f7bb",
+                        "on-surface": "#1b1c19",
+                        "primary-fixed-dim": "#74dba0",
+                        "background": "#faf9f4",
+                        "outline-variant": "#bdcabf",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.125rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "container-margin": "20px",
+                        "md": "24px",
+                        "base": "4px",
+                        "gutter": "16px",
+                        "xl": "48px",
+                        "sm": "16px",
+                        "lg": "32px",
+                        "safe": "env(safe-area-inset-bottom)"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pb-24 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-white/70 dark:bg-black/40 backdrop-blur-xl border-b border-white/20 dark:border-white/10 shadow-sm">
+<div class="flex justify-between items-center px-container-margin py-xs w-full max-w-5xl mx-auto">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">eco</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">Brakshaa 3.0</h1>
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-150 p-2 rounded-full relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full border border-white"></span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-5xl mx-auto px-container-margin pt-md pb-xl">
+<!-- Header & Compose -->
+<div class="mb-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-xs">Community</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Connect with experts and fellow farmers.</p>
+<div class="glass-card rounded-2xl p-sm flex items-center gap-sm cursor-text hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a modern, professional farmer wearing a casual yet functional button-down shirt. The lighting is soft, natural daylight, reflecting a light, airy, and high-tech agricultural setting. The mood is confident and welcoming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaXEiITz5pgVuyOUJx1rIlBa32DzFI1TNbA7WNz8W_Wpx3PhTzLc0h5QToNe3NT6mDGS6CaFL0qnzYpbGFEoOBVwCw5KsK-RZB9j_RTZpiOpKIoBMFbUKV3BGeO8zA_T3KRiiGQBG1IqxAAKddc4fHUZF4zE6T6U8eA63I5xPmH-3KQoneG97tsCDsZjQpouVbjLwcaexN3J3_Lp005qqtxLOPbRRY0UC2Set4ChPvByreTzvSrANCEFiNOBwtb5LdafnElYTJ2Zw"/>
+</div>
+<div class="flex-grow">
+<p class="font-body-md text-body-md text-outline">Share an update, ask a question...</p>
+</div>
+<button class="shrink-0 w-10 h-10 rounded-full bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">image</span>
+</button>
+</div>
+</div>
+<!-- Topics Filter (Horizontal Scroll) -->
+<div class="flex overflow-x-auto hide-scrollbar gap-sm mb-lg pb-2 -mx-container-margin px-container-margin snap-x">
+<button class="snap-start shrink-0 px-md py-xs rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md transition-colors whitespace-nowrap shadow-sm border border-primary-container/20">All Posts</button>
+<button class="snap-start shrink-0 px-md py-xs rounded-full bg-surface/50 backdrop-blur-md text-on-surface-variant font-label-md text-label-md border border-outline-variant/30 hover:bg-surface-container transition-colors whitespace-nowrap shadow-sm">Expert Advice</button>
+<button class="snap-start shrink-0 px-md py-xs rounded-full bg-surface/50 backdrop-blur-md text-on-surface-variant font-label-md text-label-md border border-outline-variant/30 hover:bg-surface-container transition-colors whitespace-nowrap shadow-sm">Market Trends</button>
+<button class="snap-start shrink-0 px-md py-xs rounded-full bg-surface/50 backdrop-blur-md text-on-surface-variant font-label-md text-label-md border border-outline-variant/30 hover:bg-surface-container transition-colors whitespace-nowrap shadow-sm">Pest Control</button>
+</div>
+<!-- Feed Container -->
+<div class="flex flex-col gap-lg">
+<!-- Post 1: Image & Expert Response -->
+<article class="glass-card rounded-2xl p-md flex flex-col gap-sm">
+<!-- Author Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-variant shadow-sm border border-white/50">
+<img class="w-full h-full object-cover" data-alt="A portrait of a farmer in a bright, modern greenhouse environment. The lighting is sunny and clear, emphasizing a clean, optimistic mood. The style is professional and highly detailed, matching a premium SaaS platform aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKD-Oi4PidSZiaaYoJX3WY4k3lI2hGGTLGHgoSGKSXsOlNS2gQdXhjTkKoX-qLXBt3t58GkS2BOG75CpQwuTulRwWQ4iM9ocTZEsVErR5fy1qVvtQN_YIM2k1BHiVJtVQ0QNRhhinHvBRPLL62vCj5DAu9dRt9ATBCYS5Ka8Y3RZr593PxD2dR7s35_uO2eLp6LDdapI9dapN5oxYUIBZT0mAl4EO5VjiQICTYQVxzFNFoYMDdZgP7T38Gb2vrVSnff2Z4a9bxeM"/>
+</div>
+<div>
+<h3 class="font-label-md text-[15px] font-semibold text-on-surface">Rajesh Kumar</h3>
+<p class="font-body-md text-[12px] font-medium text-on-surface-variant/80">2 hours ago • Wheat Farmer</p>
+</div>
+</div>
+<button class="text-on-surface-variant p-1 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Content -->
+<div class="mt-xs">
+<p class="font-body-md text-[15px] text-on-surface leading-relaxed mb-sm">Noticing slight yellowing on the tips of my wheat crop in sector 4. Soil moisture looks fine on the dashboard. Could this be a nitrogen deficiency starting early?</p>
+<div class="rounded-xl overflow-hidden aspect-[4/3] bg-surface-variant border border-outline-variant/20 relative shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A close-up, high-resolution photograph of young wheat shoots in a field. The tips of the leaves show a subtle yellowing. The lighting is bright and analytical, reflecting a precision agriculture perspective. The overall tone is clean and informative, fitting a modern agronomy app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzHv0nNHrMP-d2saB99ZDnEGhiEq1arUBnieqgczvHLKKBt7Oqo2guvJmw0KwYn5tOogVvSsrdIFmNwnkOktGKFhkI4XBneiycIZhp0CTVLlZ5isT7yO8_z8uzt3_ZFqtgRqFPhXq9CTDByuAl9HKAv7fyljBO8AlipB-7LGKG476WziF0ahSc3roeyPvvvyC94tW-KoqxuPR8IgE7q_sP3fnNgR1WMu1bsBoQdPZK35nogdtZCjlgXyqV8zlPR4NThHSav07HB1M"/>
+<div class="absolute bottom-sm right-sm bg-black/40 backdrop-blur-xl px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 border border-white/20 shadow-lg">
+<span class="material-symbols-outlined text-white text-[16px]">psychology</span>
+<span class="font-label-md text-[11px] font-semibold text-white tracking-wide uppercase">AI Scanned</span>
+</div>
+</div>
+</div>
+<!-- Interactions -->
+<div class="flex items-center justify-between pt-sm border-t border-outline-variant/20 mt-xs">
+<div class="flex items-center gap-md">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">thumb_up</span>
+<span class="font-label-md text-[14px] font-semibold">24</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">chat_bubble</span>
+<span class="font-label-md text-[14px] font-semibold">3</span>
+</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+<!-- Expert Comment Highlight -->
+<div class="mt-sm bg-gradient-to-br from-primary/5 to-surface-container-low rounded-xl p-md border border-primary/20 flex gap-sm shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl -mr-10 -mt-10"></div>
+<span class="material-symbols-outlined text-primary shrink-0 pt-1" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div class="relative z-10">
+<h4 class="font-label-md text-[14px] font-semibold text-on-surface flex items-center gap-2">Dr. Sharma <span class="text-[10px] font-bold tracking-wider uppercase bg-primary/10 text-primary px-2 py-0.5 rounded-full border border-primary/20">Agronomist</span></h4>
+<p class="font-body-md text-[14px] text-on-surface-variant mt-1.5 leading-relaxed">Given the recent temperature drop, this might be temporary cold stress rather than nitrogen deficiency. Keep monitoring via the AI health score for the next 48h before applying fertilizers.</p>
+</div>
+</div>
+</article>
+<!-- Post 2: Text & Poll -->
+<article class="glass-card rounded-2xl p-md flex flex-col gap-sm">
+<!-- Author Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container/20 text-primary flex items-center justify-center font-headline-md border border-primary/20 shadow-sm">
+                            A
+                        </div>
+<div>
+<h3 class="font-label-md text-[15px] font-semibold text-on-surface">Anita Patel</h3>
+<p class="font-body-md text-[12px] font-medium text-on-surface-variant/80">5 hours ago • Organic Vegetables</p>
+</div>
+</div>
+</div>
+<!-- Content -->
+<div class="mt-xs">
+<p class="font-body-md text-[15px] text-on-surface leading-relaxed mb-sm">What organic pesticide alternative is everyone finding most effective against aphids this season? Neem oil isn't quite doing it for my tomatoes.</p>
+<!-- Custom Poll UI -->
+<div class="flex flex-col gap-2.5 mt-md">
+<div class="relative w-full h-11 rounded-xl overflow-hidden border border-outline-variant/20 bg-surface/50 backdrop-blur-sm cursor-pointer hover:border-primary/50 transition-colors flex items-center px-sm shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 bg-primary/15 w-[65%] z-0 rounded-r-md"></div>
+<span class="font-label-md text-[14px] font-semibold text-on-surface relative z-10">Pyrethrin spray</span>
+<span class="font-label-md text-[13px] font-bold text-primary relative z-10 ml-auto">65%</span>
+</div>
+<div class="relative w-full h-11 rounded-xl overflow-hidden border border-outline-variant/20 bg-surface/50 backdrop-blur-sm cursor-pointer hover:border-primary/50 transition-colors flex items-center px-sm shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 bg-primary/10 w-[20%] z-0 rounded-r-md"></div>
+<span class="font-label-md text-[14px] font-medium text-on-surface relative z-10">Soap solutions</span>
+<span class="font-label-md text-[13px] font-semibold text-on-surface-variant relative z-10 ml-auto">20%</span>
+</div>
+<div class="relative w-full h-11 rounded-xl overflow-hidden border border-outline-variant/20 bg-surface/50 backdrop-blur-sm cursor-pointer hover:border-primary/50 transition-colors flex items-center px-sm shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 bg-primary/10 w-[15%] z-0 rounded-r-md"></div>
+<span class="font-label-md text-[14px] font-medium text-on-surface relative z-10">Ladybugs (Biological)</span>
+<span class="font-label-md text-[13px] font-semibold text-on-surface-variant relative z-10 ml-auto">15%</span>
+</div>
+<p class="font-body-md text-[11px] font-medium text-on-surface-variant/70 mt-1 text-right uppercase tracking-wider">142 votes</p>
+</div>
+</div>
+<!-- Interactions -->
+<div class="flex items-center justify-between pt-sm border-t border-outline-variant/20 mt-xs">
+<div class="flex items-center gap-md">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">thumb_up</span>
+<span class="font-label-md text-[14px] font-semibold">12</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label-md text-[14px] font-semibold">8</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Semantic Active State: Community) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-white/80 dark:bg-black/60 backdrop-blur-2xl border-t border-white/30 dark:border-white/10 shadow-[0px_-10px_40px_rgba(0,0,0,0.08)] md:hidden">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe pt-2">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-low transition-colors active:scale-90 duration-200 rounded-xl group w-16">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors">home</span>
+<span class="font-label-md text-[10px] leading-tight font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-low transition-colors active:scale-90 duration-200 rounded-xl group w-16">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors">psychology</span>
+<span class="font-label-md text-[10px] leading-tight font-medium">Diagnose</span>
+</button>
+<!-- Active State -->
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl p-2 active:scale-90 duration-200 w-16 shadow-inner border border-primary-container/50">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-label-md text-[10px] leading-tight font-semibold">Community</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-low transition-colors active:scale-90 duration-200 rounded-xl group w-16">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors">storefront</span>
+<span class="font-label-md text-[10px] leading-tight font-medium">Market</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-low transition-colors active:scale-90 duration-200 rounded-xl group w-16">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors">person</span>
+<span class="font-label-md text-[10px] leading-tight font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>
