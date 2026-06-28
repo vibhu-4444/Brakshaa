@@ -7,4 +7,6 @@ class BrakshaaAssets {
   static const communityWheat = 'assets/images/community_wheat.png';
   static const farmerAvatar = 'assets/images/farmer_avatar.png';
   static const farmerAvatarAlt = 'assets/images/farmer_avatar_alt.png';
+  static const authFieldBackground = 'assets/images/auth_field_background.png';
+  static const termsHero = 'assets/images/terms_hero.png';
 }

@@ -46,7 +46,7 @@ class SettingsController extends StateNotifier<AppSettings> {
 }
 
 class AuthController extends StateNotifier<UserSession> {
-  AuthController(this._authService) : super(UserSession.guest());
+  AuthController(this._authService) : super(UserSession.signedOut());
 
   final AuthService _authService;
 

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brakshaa 3.0 | Cultivating the Future</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#74dba0",
+                    "on-surface": "#1b1c19",
+                    "surface-dim": "#dbdad5",
+                    "on-primary-fixed": "#002111",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface": "#faf9f4",
+                    "surface-container-low": "#f5f4ef",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#faf9f4",
+                    "secondary-container": "#dfe0e0",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffdea3",
+                    "tertiary-container": "#966e00",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e9e8e3",
+                    "on-primary-fixed-variant": "#005231",
+                    "surface-variant": "#e3e3de",
+                    "surface-container": "#efeee9",
+                    "inverse-primary": "#74dba0",
+                    "tertiary-fixed-dim": "#fdbc13",
+                    "on-surface-variant": "#3e4941",
+                    "primary-fixed": "#90f7bb",
+                    "on-tertiary-fixed": "#261900",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#775600",
+                    "surface-container-highest": "#e3e3de",
+                    "on-secondary-container": "#616363",
+                    "primary-container": "#0d8553",
+                    "on-tertiary-container": "#fffbff",
+                    "inverse-surface": "#30312e",
+                    "outline": "#6e7a70",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "surface-tint": "#006d42",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-primary-container": "#f6fff5",
+                    "inverse-on-surface": "#f2f1ec",
+                    "on-primary": "#ffffff",
+                    "secondary": "#5d5f5f",
+                    "primary": "#006a40",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "background": "#faf9f4",
+                    "on-background": "#1b1c19",
+                    "outline-variant": "#bdcabf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "18px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "48px",
+                    "xs": "8px",
+                    "lg": "32px",
+                    "base": "4px",
+                    "gutter": "16px",
+                    "md": "24px",
+                    "sm": "16px",
+                    "container-margin": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #faf9f4;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-plus { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .emerald-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 106, 64, 0.2);
+        }
+
+        .auth-tab-active {
+            color: #006a40;
+            position: relative;
+        }
+        .auth-tab-active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #006a40;
+        }
+
+        .floating-input:focus-within label,
+        .floating-input input:not(:placeholder-shown) + label {
+            transform: translateY(-1.25rem) scale(0.85);
+            color: #006a40;
+        }
+
+        .bg-mesh {
+            background: 
+                radial-gradient(at 0% 0%, rgba(0, 106, 64, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(253, 188, 19, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 106, 64, 0.05) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(253, 188, 19, 0.05) 0px, transparent 50%);
+        }
+
+        .transition-soft {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-mesh p-container-margin">
+<!-- Background Visual Element -->
+<div class="fixed inset-0 -z-10 opacity-30 pointer-events-none overflow-hidden"><div class="absolute inset-0 bg-cover bg-center scale-110 blur-sm transform" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaJnFTk8mtP7Xok2WLiLdmy6bVEYB5LlGYvd819u4GP34Vu8xHuA0W0BpY2Xbc-4hhJ3-l8NIa0CVTcZRyuv1X0P2rIsZp4n6_Gnxh5ou4HdBcMzlXegjLGTuHmoBXG20fq1kV233ORX71IxqxyZ_F3fxySewpUuz_sk7EwCZqcN9mhTZznIohArJLxs8fAq7Mbxn75Q2TpArpEDHUAG7idleJEnOX3VNbIRizYZTieBQnif5kpPCXdkLpGtQ5loj4-ZofOjUhVuc')"></div><div class="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-tertiary/5"></div><div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]"></div><div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-tertiary/5 rounded-full blur-[120px]"></div></div>
+<!-- Main Container -->
+<main class="w-full max-w-[480px] space-y-lg animate-fade-in">
+<!-- Hero Header -->
+<header class="text-center space-y-sm"><div class="flex items-center justify-center gap-xs mb-sm"><span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">eco</span><span class="font-display-lg text-headline-md text-on-surface tracking-tight">Brakshaa 3.0</span></div><div class="space-y-xs"><h1 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight leading-tight">Cultivating the Future</h1><p class="font-body-md text-on-surface-variant/80 max-w-[320px] mx-auto leading-relaxed">Join the world's most advanced AI farming ecosystem.</p></div></header>
+<!-- Auth Card -->
+<div class="glass-card rounded-xl p-lg space-y-lg shadow-2xl shadow-primary/5 border border-white/40">
+<!-- Tabs -->
+<div class="flex items-center justify-center gap-xl border-b border-outline-variant/30 pb-sm"><button class="font-label-md text-primary auth-tab-active transition-soft px-4 py-2 relative" id="tab-signin" onclick="switchTab('signin')">Sign In</button><button class="font-label-md text-on-surface-variant hover:text-primary transition-soft px-4 py-2" id="tab-signup" onclick="switchTab('signup')">Sign Up</button></div>
+<!-- Form -->
+<form class="space-y-md" id="auth-form" onsubmit="event.preventDefault();">
+<!-- Inputs Container -->
+<div class="space-y-sm"><div class="relative floating-input group"><input class="block w-full px-md py-4 bg-surface-container-low/50 border border-outline-variant/20 rounded-xl focus:ring-2 focus:ring-primary/10 focus:border-primary/30 focus:bg-white transition-all font-body-md text-on-surface outline-none" id="email" placeholder=" " type="email"/><label class="absolute left-md top-4 text-on-surface-variant/60 font-body-md transition-all pointer-events-none origin-left" for="email">Email address</label></div><div class="relative floating-input group"><input class="block w-full px-md py-4 bg-surface-container-low/50 border border-outline-variant/20 rounded-xl focus:ring-2 focus:ring-primary/10 focus:border-primary/30 focus:bg-white transition-all font-body-md text-on-surface outline-none" id="password" placeholder=" " type="password"/><label class="absolute left-md top-4 text-on-surface-variant/60 font-body-md transition-all pointer-events-none origin-left" for="password">Password</label></div></div>
+<!-- Additional Links -->
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-xs cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20 transition-soft" type="checkbox"/>
+<span class="font-label-md text-on-surface-variant group-hover:text-on-surface">Remember me</span>
+</label>
+<a class="font-label-md text-primary hover:opacity-80 transition-opacity" href="#">Forgot Password?</a>
+</div>
+<!-- CTA -->
+<button class="w-full py-4 bg-[#1E8E5B] text-on-primary font-label-md rounded-xl emerald-glow transition-soft active:scale-[0.98] shadow-lg shadow-primary/20 tracking-wide">
+                    Get Started
+                </button>
+</form>
+<!-- Social Divider -->
+<div class="relative flex items-center justify-center py-xs"><button class="font-label-md text-primary auth-tab-active transition-soft px-4 py-2 relative" id="tab-signin" onclick="switchTab('signin')">Sign In</button><button class="font-label-md text-on-surface-variant hover:text-primary transition-soft px-4 py-2" id="tab-signup" onclick="switchTab('signup')">Sign Up</button></div>
+<!-- Social Buttons -->
+<div class="grid grid-cols-2 gap-sm"><button class="flex items-center justify-center gap-xs py-3 bg-white/40 border border-white/60 rounded-xl hover:bg-white/80 transition-soft group"><svg class="w-5 h-5" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg><span class="font-label-md text-on-surface">Google</span></button><button class="flex items-center justify-center gap-xs py-3 bg-white/40 border border-white/60 rounded-xl hover:bg-white/80 transition-soft group"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.05 20.28c-.96 0-2.04-.6-3.23-.6-1.17 0-2.34.62-3.23.62-1.47 0-4.06-2.48-4.06-6.11 0-3.6 2.33-5.5 4.54-5.5 1.18 0 2.15.75 3 .75.79 0 2.02-.85 3.35-.85 1.4 0 2.45.66 3.12 1.61-2.76 1.45-2.31 5.2.5 6.35-.67 1.76-1.63 3.53-3.05 3.53a4.08 4.08 0 0 1-.94-.22zM12.03 7.25c-.02-2.13 1.8-3.95 3.91-4.01.03 2.13-1.8 4.12-3.91 4.01z"></path></svg><span class="font-label-md text-on-surface">Apple</span></button></div>
+</div>
+<!-- Footer / Legal -->
+<footer class="flex flex-col items-center gap-sm pt-md">
+<div class="flex gap-md">
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="font-label-md text-outline-variant text-[11px] uppercase tracking-[0.2em]">Brakshaa 3.0 • v3.4.12-pro</p>
+</footer>
+</main>
+<!-- Notification Micro-interaction -->
+<div class="fixed bottom-lg left-1/2 -translate-x-1/2 glass-card px-md py-sm rounded-full opacity-0 translate-y-10 transition-all duration-500 pointer-events-none flex items-center gap-xs" id="toast">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-md text-on-surface">Welcome back to the field.</span>
+</div>
+<script>
+        function switchTab(type) {
+            const signin = document.getElementById('tab-signin');
+            const signup = document.getElementById('tab-signup');
+            const btn = document.querySelector('form button');
+
+            if (type === 'signup') {
+                signup.classList.add('auth-tab-active', 'text-primary');
+                signup.classList.remove('text-on-surface-variant');
+                signin.classList.remove('auth-tab-active', 'text-primary');
+                signin.classList.add('text-on-surface-variant');
+                btn.textContent = 'Create Account';
+            } else {
+                signin.classList.add('auth-tab-active', 'text-primary');
+                signin.classList.remove('text-on-surface-variant');
+                signup.classList.remove('auth-tab-active', 'text-primary');
+                signup.classList.add('text-on-surface-variant');
+                btn.textContent = 'Get Started';
+            }
+        }
+
+        // Simple animation trigger for demo
+        window.addEventListener('load', () => {
+            const toast = document.getElementById('toast');
+            setTimeout(() => {
+                toast.classList.remove('opacity-0', 'translate-y-10');
+                setTimeout(() => {
+                    toast.classList.add('opacity-0', 'translate-y-10');
+                }, 3000);
+            }, 1000);
+        });
+
+        // Floating label fix for pre-filled inputs
+        document.querySelectorAll('.floating-input input').forEach(input => {
+            input.addEventListener('change', (e) => {
+                if (e.target.value) {
+                    e.target.nextElementSibling.classList.add('scale-85', '-translate-y-5');
+                }
+            });
+        });
+    </script>
+</body></html>
